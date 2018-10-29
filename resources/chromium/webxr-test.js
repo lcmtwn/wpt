@@ -146,6 +146,10 @@ class MockRuntime {
     } else {
       this.displayInfo_ = this.getNonImmersiveDisplayInfo();
     }
+
+    if (fakeDeviceInit.supportsEnvironmentIntegration) {
+      this.displayInfo_.capabilities.can_provide_environment_integration = true;
+    }
   }
 
   // Test methods.
